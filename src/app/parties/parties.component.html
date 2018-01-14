@@ -1,0 +1,17 @@
+
+<h2>Select One or more parties</h2>
+<ul class="parties">
+  <li *ngFor="let party of parties" (click)="onSelectParty(party)">
+    <span class="badge" > {{party.id}}</span> {{party.name}}
+  </li>
+</ul>
+
+<h2> Selected Parties </h2>
+
+<ul class="selParty" *ngIf="newSel">
+  <li *ngFor="let selParty of selectedParties">
+    <span class="badge"> {{selParty.id}}</span> {{selParty.name}} <br/>
+  </li>
+</ul>
+
+<h3> {{debug1}} </h3>
